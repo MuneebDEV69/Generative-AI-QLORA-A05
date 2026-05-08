@@ -59,7 +59,7 @@ The notebook follows this end-to-end pipeline:
 11. Generate Markdown on validation samples
 12. Evaluate predictions with ROUGE
 13. Test on 3 training images and 3 unseen images
-14. Compare zero-shot and fine-tuned outputs
+14. Compare zero-shot and fine-tuned outputs and other all 3-bonus tasks
 15. Launch a Gradio app for image upload and Markdown generation
 
 ## Training Configuration
@@ -137,32 +137,3 @@ This repository supports the assignment deliverables:
 - Dataset subsetting is bounded by max_samples to keep runtime manageable.
 - The code uses 4-bit quantization and gradient accumulation to fit Kaggle GPU constraints.
 - The notebook saves outputs into the configured working directory.
-
-## Known Notes
-
-- The notebook is optimized for a limited Kaggle runtime, so the epoch count is intentionally low.
-- The current setup prioritizes feasible training over exhaustive fine-tuning.
-- If you run with more compute, you can increase max_samples or epochs for stronger results.
-
-## Suggested Submission Checklist
-
-- Verify the notebook runs end to end
-- Confirm the generated result images are saved
-- Capture screenshots of the training and inference outputs
-- Include the README in the final submission
-- Publish or push the notebook and README to GitHub
-
-## Result Summary Template
-
-If you want to add your final metrics later, you can paste them here:
-
-| Metric | Value |
-|---|---|
-| Final train loss | add value |
-| Final validation loss | add value |
-| ROUGE-1 | add value |
-| ROUGE-L | add value |
-
-## Next Step
-
-If you want, I can also turn this into a more polished GitHub README with a project banner, badges, and a compact results section once you share the final training outputs.
